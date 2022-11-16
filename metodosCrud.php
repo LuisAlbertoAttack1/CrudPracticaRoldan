@@ -27,7 +27,12 @@
 
         }
 
-
+        public function eliminarDatosNombre($id){
+            $c = new Conectar();
+            $conexion =$c->conexion();
+            $sql = "DELETE from t_materias where id='$id'";
+            return $result = mysqli_query($conexion,$sql);
+       }
 
     }
 ?>
